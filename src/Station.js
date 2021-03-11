@@ -14,7 +14,7 @@ class Station extends React.Component {
 
   componentDidMount() {
     this.stationAudio = new Howl({
-      src: [this.props.station.src],
+      src: [this.props.station.u],
       html5: true,
       format: ["mp3", "aac"],
     });
@@ -43,7 +43,7 @@ class Station extends React.Component {
           <button className="pause" onClick={this.onPause}>
             &#10074;&#10074;
           </button>{" "}
-          <b>{this.props.station.freq}</b> {this.props.station.title}
+          <b>{this.props.station.n}</b>
         </td>
       </tr>
     );
