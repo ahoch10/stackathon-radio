@@ -3,6 +3,7 @@ html {
   padding: 5px;
   background-repeat: no-repeat;
   height: 100%;
+  background-attachment: fixed;
 }
 
 body {

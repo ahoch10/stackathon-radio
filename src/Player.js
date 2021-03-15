@@ -14,8 +14,13 @@ const stations = [
     howl: null,
   },
   {
-    n: "Today's Hits 107.7",
+    n: "107.7 Today's Hits",
     u: "https://rfcmedia.streamguys1.com/MusicPulse.mp3",
+    howl: null,
+  },
+  {
+    n: "99.5 Clasical Radio",
+    u: "https://streams.audio.wgbh.org:8204//classical-hi",
     howl: null,
   },
 ];
@@ -43,12 +48,13 @@ class Player extends React.Component {
         params: { country: "ALL", keyword: this.state.keyword, genre: "ALL" },
         headers: {
           "x-rapidapi-key":
-            "1de4755cdamsh616e60334276200p18dcf7jsn3db37aad5a52",
+            "68a1df0dfbmsh46737b2f148d4c0p1f27b5jsn171513e51771",
           "x-rapidapi-host":
             "30-000-radio-stations-and-music-charts.p.rapidapi.com",
         },
       });
-      console.log(response.data);
+      console.log("response", response);
+      console.log(response.data.length);
       this.setState({ stations: response.data.results });
     } catch (error) {
       console.log(error);
