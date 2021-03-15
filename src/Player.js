@@ -1,6 +1,7 @@
 import React from "react";
 import Station from "./Station";
 import axios from "axios";
+import MY_API_KEY from "./api-key";
 
 const stations = [
   {
@@ -47,8 +48,7 @@ class Player extends React.Component {
           "https://30-000-radio-stations-and-music-charts.p.rapidapi.com/rapidapi",
         params: { country: "ALL", keyword: this.state.keyword, genre: "ALL" },
         headers: {
-          "x-rapidapi-key":
-            "68a1df0dfbmsh46737b2f148d4c0p1f27b5jsn171513e51771",
+          "x-rapidapi-key": MY_API_KEY,
           "x-rapidapi-host":
             "30-000-radio-stations-and-music-charts.p.rapidapi.com",
         },
